@@ -107,4 +107,144 @@ the arguments will be added together and result will be logged to the console.
 ## What is the difference between object and map?
 
 * Answer - `An object is a data structure that stores data in key-value pairs. The keys are used to access the values, and the values can be of any type. A map is a data structure that stores data in key-value pairs, but the keys must be unique. The values can be of any type.`
+Eg.
+``` js
+// Create an object
+const person = {
+    name: "Shivam",
+    age: 25,
+    occupation: "Software Engineer"
+  };
+  
+  // Create a map
+  const people = new Map();
+  people.set("Mohd Kaif", 20);
+  people.set("Saurabh", 22);
+  people.set("Semwal Gaurav", 24);
+  
+  // Access data from an object
+  console.log(person.name);
+  
+  
+  // Access data from a map
+  console.log(people.get("Saurabh"));
+  
+  
+  // Update data in an object
+  person.age = 22;
+  
+  // Update data in a map
+  people.set("Saurabh", 22);
+  
+  // Delete data from an object
+  delete person.age;
 
+  // Output:
+  Shivam
+  22
+  
+  ```
+  
+------------------------------------------
+------------------------------------------
+# Question 5 
+## Rewrite the code below to use array destructuring instead of assigning each value to a variable.
+```js 
+let item = ["Egg", 0.25, 12]; 
+let name = item[0]; 
+let price = item[1]; 
+let quantity = item[2]; 
+console.log(`Item: ${name}, Quantity: ${quantity}, Price: ${price}`); console.log(); 
+
+// After Destructuring code we can write it like this
+let item = ["Egg", 0.25, 12]; 
+let [name, price, quantity] = item;
+console.log(`Item: ${name}, Quantity: ${quantity}, Price: ${price}`);
+console.log(); 
+
+// Output:
+ Item: Egg, Quantity: 12, Price: 0.25
+```
+------------------------------------------
+------------------------------------------
+# Question 6
+## Using Array Destructuring get all of the names from this Nested Array
+```js
+const moreStudents = [ 'Chris', ['Ahmad', 'Antigoni'], ['Toby', 'Sam'] ]; 
+// Write your code here 
+const [] = moreStudents; 
+console.log(student1, student2, student3, student4, student5);
+
+```
+* The first step is to declare the variables that will hold the values of each element in the array. In this case, we will need five variables: student1, student2, student3, student4, and student5.
+
+The next step is to use array destructuring to assign the values of each element in the array to the corresponding variable. To do this, we use the following syntax:
+
+```js
+const [student1, [student2, student3, ],[student4, student5]] = moreStudents;
+```
+* This will assign the value of the first element in the array to the variable student1, the value of the second element to the variable student2, and so on.
+
+Finally, we can log the values of the variables to the console to see the results.
+```js
+console.log(student1, student2, student3, student4, student5);
+```
+The final code be like this 
+```js
+const moreStudents = [ 'Chris', ['Ahmad', 'Antigoni'], ['Toby', 'Sam'] ]; 
+const [student1, [student2, student3, ],[student4, student5]] = moreStudents;
+console.log(student1, student2, student3, student4, student5);
+
+// Output :
+Chris Ahmad Antigoni Toby Sam
+
+```
+* That's how Destructuring get all of the names from this Nested Array
+------------------------------------------
+
+------------------------------------------
+# Question 7 
+## Fix the code to make it work.
+```js
+let map = new Map(); 
+map.set("key", "value"); 
+let keys = map.keys();
+keys.push("more");
+
+```
+Here is fixed code 
+```js
+let map = new Map();
+map.set("key", "value");
+let keys = Array.from(map.keys()); // Array.from() Method 
+keys.push("more");
+console.log(keys);
+
+// Output :
+[ 'key', 'more' ]
+```
+
+* `Array.from()` method to convert the iterator returned by `map.keys()` into an array. This allows us to use the push method to add a new element to the keys array.
+
+
+------------------------------------------
+------------------------------------------
+# Question 8 
+## What is the difference between set and weakset? Explain with the help of examples.
+* Difference between set and weakset
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+           Set                           ---------                 WeakSet              |
+
+*  Set does not allow duplicates                             Weak set does              |
+* A set is iterable                                          while a weak set is not.
+* A set can be used with the `for...of` loop                 while a weak set cannot    |
+* A set can be used with the `map()` function                while a weak set cannot.
+* A set can be used with the `filter()` function             while a weak set cannot.   |
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+The Main
+In Example :
+
+
+
+------------------------------------------
