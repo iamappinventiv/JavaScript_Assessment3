@@ -232,17 +232,13 @@ console.log(keys);
 # Question 8 
 ## What is the difference between set and weakset? Explain with the help of examples.
 * Difference between set and weakset
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-           Set                           ---------                 WeakSet              
-
-*  Set does not allow duplicates                             Weak set does              
+             
+*  Set does not allow duplicates,                           Weak set does              
 * A set is iterable                                          while a weak set is not.
-* A set can be used with the `for...of` loop                 while a weak set cannot    
-* A set can be used with the `map()` function                while a weak set cannot.
-* A set can be used with the `filter()` function             while a weak set cannot.   
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-The Main
+* A set can be used with the `for...of` loop,          while a weak set cannot    
+* A set can be used with the `map()` function,                while a weak set cannot.
+* A set can be used with the `filter()` function,             while a weak set cannot.   
+* The main diff. b/w them is that `Set` can store any type of value while weakset not.
 In Example :
 
 
