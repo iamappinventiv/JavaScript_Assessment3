@@ -238,9 +238,42 @@ console.log(keys);
 * A set can be used with the `for...of` loop,          while a weak set cannot    
 * A set can be used with the `map()` function,                while a weak set cannot.
 * A set can be used with the `filter()` function,             while a weak set cannot.   
-* The main diff. b/w them is that `Set` can store any type of value while weakset not.
+* The main diff. b/w them is that `Set` can store any type of value while `weakset` not.
 In Example :
 
 
+
+
+------------------------------------------
+------------------------------------------
+# Question 9
+## What is the difference between map and weakmap? Explain with the help of examples.
+* Difference b/w them :
+**Map** and **weakmap** are both key-value stores in JavaScript. They are both used to associate a value with a key. However, there are some key differences between the two.
+
+* **Maps** are **strong**, which means that they keep a strong reference to the value that they store. This means that the value will not be garbage collected as long as the map exists.
+* **Weakmaps** are **weak**, which means that they keep a weak reference to the value that they store. This means that the value may be garbage collected if there are no other strong references to it.
+
+Here is an example of how to use a map:
+```js
+const map = new Map();
+map.set('foo', 'bar');
+console.log(map.get('foo')); 
+
+//Output:
+bar
+
+```
+Here is an example of how to use a weakmap:
+```js
+const weakmap = new WeakMap();
+weakmap.set(obj, 'bar');
+console.log(weakmap.get(obj)); 
+
+// Output: 
+bar
+
+```
+In this example, the object `obj` is not a primitive value. If it were a primitive value, then the weakmap would keep a strong reference to it and it would not be garbage collected. However, since `obj` is not a primitive value, the weakmap will only keep a weak reference to it and it may be garbage collected if there are no other strong references to it.
 
 ------------------------------------------

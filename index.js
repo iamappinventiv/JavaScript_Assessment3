@@ -1,5 +1,3 @@
-let map = new Map();
-map.set("key", "value");
-let keys = Array.from(map.keys());
-keys.push("more");
-console.log(keys);
+const map = new Map();
+map.set('foo', 'bar');
+console.log(map.get('foo')); // bar
