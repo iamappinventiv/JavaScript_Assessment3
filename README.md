@@ -240,19 +240,43 @@ console.log(keys);
 * A set can be used with the `filter()` function,             while a weak set cannot.   
 * The main diff. b/w them is that `Set` can store any type of value while `weakset` not.
 In Example :
+* Sets can store any value. WeakSets are collections of objects only. WeakSet does not have size property. WeakSet does not have clear, keys, values, entries, forEach methods.
 
+```js
+let set = new Set();
+let weakset = new WeakSet();
 
+let obj = { key: "value" };
 
+set.add(obj);
+weakset.add(obj);
+
+console.log(set.has(obj)); // true
+console.log(weakset.has(obj)); // true
+
+obj = null;
+
+console.log(set.has(obj)); // false
+console.log(weakset.has(obj)); // false
+
+// Output:
+true
+true
+false
+false
+
+```
+`In this example, we create a Set and a WeakSet, and add an object to both of them. Then we set the obj variable to null, which removes the only strong reference to the object. At this point, the object is still stored in the Set, but it is no longer stored in the WeakSet, because the reference to it was weak.`
 
 ------------------------------------------
 ------------------------------------------
 # Question 9
 ## What is the difference between map and weakmap? Explain with the help of examples.
 * Difference b/w them :
-* `**Map**` and `**weakmap**` are both key-value stores in JavaScript. They are both used to associate a value with a key. but, there are some key differences between the two.
+* `Map` and `weakmap` are both key-value stores in JavaScript. They are both used to associate a value with a key. but, there are some key differences between the two.
 
-* `**Maps**` are `**strong**`, which means that they keep a strong reference to the value that they store. This means that the value will not be garbage collected as long as the map exists.
-* `**Weakmaps**` are `**weak**`, which means that they keep a weak reference to the value that they store. This means that the value may be garbage collected if there are no other strong references to it.
+* `Maps` are `strong`, which means that they keep a strong reference to the value that they store. This means that the value will not be garbage collected as long as the map exists.
+* `Weakmaps` are `weak`, which means that they keep a weak reference to the value that they store. This means that the value may be garbage collected if there are no other strong references to it.
 
 Here is an example of how to use a map:
 ```js
