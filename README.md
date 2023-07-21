@@ -249,10 +249,10 @@ In Example :
 # Question 9
 ## What is the difference between map and weakmap? Explain with the help of examples.
 * Difference b/w them :
-**Map** and **weakmap** are both key-value stores in JavaScript. They are both used to associate a value with a key. However, there are some key differences between the two.
+* `**Map**` and `**weakmap**` are both key-value stores in JavaScript. They are both used to associate a value with a key. but, there are some key differences between the two.
 
-* **Maps** are **strong**, which means that they keep a strong reference to the value that they store. This means that the value will not be garbage collected as long as the map exists.
-* **Weakmaps** are **weak**, which means that they keep a weak reference to the value that they store. This means that the value may be garbage collected if there are no other strong references to it.
+* `**Maps**` are `**strong**`, which means that they keep a strong reference to the value that they store. This means that the value will not be garbage collected as long as the map exists.
+* `**Weakmaps**` are `**weak**`, which means that they keep a weak reference to the value that they store. This means that the value may be garbage collected if there are no other strong references to it.
 
 Here is an example of how to use a map:
 ```js
